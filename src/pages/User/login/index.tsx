@@ -9,11 +9,12 @@ import {
 import { Alert, Space, message, Tabs } from 'antd';
 import React, { useState } from 'react';
 import ProForm, { ProFormCaptcha, ProFormCheckbox, ProFormText } from '@ant-design/pro-form';
-import { useIntl, Link, history, FormattedMessage, SelectLang, useModel } from 'umi';
+import { useIntl, Link, history, FormattedMessage, SelectLang } from 'umi';
 import Footer from '@/components/Footer';
 import { login, getFakeCaptcha } from '@/services/ant-design-pro/login';
 
 import styles from './index.less';
+import { useModel } from '@@/plugin-model/useModel';
 
 const LoginMessage: React.FC<{
   content: string;
@@ -84,10 +85,10 @@ const Login: React.FC = () => {
           <div className={styles.header}>
             <Link to="/">
               <img alt="logo" className={styles.logo} src="/logo.png" />
-              <span className={styles.title}>blog</span>
+              <span className={styles.title}>Person Blog</span>
             </Link>
           </div>
-          <div className={styles.desc}>首款全开源个人博客后台管理系统</div>
+          <div className={styles.desc}>Person Blog 是首个全开源个人博客管理 Web 系统</div>
         </div>
 
         <div className={styles.main}>
