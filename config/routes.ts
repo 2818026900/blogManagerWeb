@@ -1,4 +1,4 @@
-﻿export default [
+export default [
   {
     path: '/user',
     layout: false,
@@ -77,12 +77,6 @@
         component: './Home',
       },
     ],
-  },
-  {
-    name: 'list.table-list',
-    icon: 'table',
-    path: '/list',
-    component: './TableList',
   },
   {
     path: '/',

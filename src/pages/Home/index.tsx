@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Card, Carousel, Table } from 'antd';
+import { BackTop, Calendar, Card, Carousel, Table } from 'antd';
 import ProList from '@ant-design/pro-list';
 
 // @ts-ignore
@@ -13,6 +13,7 @@ import bg3 from '@/asserts/background/3.jpg';
 // @ts-ignore
 import bg4 from '@/asserts/background/4.jpg';
 import CustomIcon from '@/components/CustomIcon';
+import { VerticalAlignTopOutlined } from '@ant-design/icons';
 
 const Info = [
   {
@@ -75,16 +76,16 @@ export default (): React.ReactNode => {
         <div>
           <Carousel autoplay={true} effect={'fade'}>
             <div className={styles.carousel}>
-              <img src={bg1} />
+              <img src={bg1} alt={'bg1'} />
             </div>
             <div className={styles.carousel}>
-              <img src={bg5} />
+              <img src={bg5} alt={'bg5'} />
             </div>
             <div className={styles.carousel}>
-              <img src={bg3} />
+              <img src={bg3} alt={'bg3'} />
             </div>
             <div className={styles.carousel}>
-              <img src={bg4} />
+              <img src={bg4} alt={'bg4'} />
             </div>
           </Carousel>
         </div>
@@ -145,6 +146,14 @@ export default (): React.ReactNode => {
             }}
             dataSource={data}
           />
+        </div>
+        <div>
+          <BackTop>
+            <VerticalAlignTopOutlined
+              className={styles.backTop}
+              style={{ fontSize: '38px', color: '#13227a', marginLeft: '5px', paddingTop: '7px' }}
+            />
+          </BackTop>
         </div>
       </Card>
     </div>
